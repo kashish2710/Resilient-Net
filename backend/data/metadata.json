@@ -1,0 +1,44 @@
+{
+  "project": "ResiNet - Dynamic Wireless Network Intrusion Detection",
+  "num_nodes": 20,
+  "num_snapshots": 1000,
+  "area_size": 500,
+  "communication_range": 150,
+  "packets_per_step": 30,
+  "feature_columns": [
+    "x",
+    "y",
+    "speed",
+    "packets_sent",
+    "packets_received",
+    "packets_forwarded",
+    "packets_dropped",
+    "drop_ratio",
+    "forwarding_ratio",
+    "delivery_ratio",
+    "packet_rate",
+    "degree",
+    "trust_score",
+    "avg_neighbor_trust"
+  ],
+  "attack_nodes": {
+    "3": "blackhole",
+    "7": "grayhole",
+    "12": "selective_forwarding"
+  },
+  "model": {
+    "type": "GAT",
+    "input_features": 14,
+    "hidden_features": 32,
+    "heads_first_layer": 4,
+    "heads_second_layer": 1,
+    "dropout": 0.2
+  },
+  "metrics": {
+    "test_accuracy": 0.75,
+    "roc_auc": 0.8759,
+    "malicious_precision": 0.36,
+    "malicious_recall": 0.82,
+    "malicious_f1": 0.5
+  }
+}
