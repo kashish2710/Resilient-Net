@@ -11,7 +11,7 @@ function App() {
   const [selectedNode, setSelectedNode] = useState(null);
 
   const [playing, setPlaying] = useState(true);
-  const [speed, setSpeed] = useState(1);
+const [speed, setSpeed] = useState(5);
 
   // -----------------------------------------
   // LOAD SNAPSHOT
@@ -22,7 +22,27 @@ function App() {
       .then(response => response.json())
       .then(result => {
         setData(result);
+if (!selectedNode && result.nodes.length > 0) {
+    const randomNode =
+        result.nodes[Math.floor(Math.random() * result.nodes.length)];
 
+    const prediction = result.predictions.find(
+        p => Number(p.node_id) === Number(randomNode.node_id)
+    );
+
+    setSelectedNode({
+        ...randomNode,
+        prediction: prediction
+            ? Number(prediction.prediction)
+            : 0,
+        normal_probability: prediction
+            ? Number(prediction.normal_probability)
+            : 0,
+        malicious_probability: prediction
+            ? Number(prediction.malicious_probability)
+            : 0
+    });
+}
         // Keep selected node synchronized
         if (selectedNode) {
           const updatedNode = result.nodes.find(
