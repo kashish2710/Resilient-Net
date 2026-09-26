@@ -317,15 +317,21 @@ if (!selectedNode && result.nodes.length > 0) {
         </section>
 
 
-        {/* RIGHT — NODE INTELLIGENCE */}
+       {/* RIGHT — NODE INTELLIGENCE */}
+<aside className="intelligence-panel">
 
-        <aside className="intelligence-panel">
+  <div className="node-instruction">
+    <strong>SELECT ANY NODE</strong>
+    <span>
+      Click on a node in the network graph to view its details.
+    </span>
+  </div>
 
-          <NodeDetails
-            node={selectedNode}
-          />
+  <NodeDetails
+    node={selectedNode}
+  />
 
-        </aside>
+</aside>
 
       </main>
 
