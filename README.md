@@ -562,6 +562,24 @@ The frontend receives its public URL from the Render Static Site service.
 Open the Render dashboard and select the frontend Static Site service to access the deployed UI.
 
 ---
+### Interactive Network Visualization
+
+The ResiNet dashboard provides an interactive network graph where users can explore individual nodes in real time.
+
+* **Click on any node** in the network graph to view its detailed information.
+* The **Node Details** panel displays information related to the selected node, including:
+
+  * Node ID
+  * Current node status
+  * Actual label (Normal / Malicious)
+  * Predicted status
+  * Normal probability
+  * Malicious probability
+* The selected node's information is automatically updated as the network simulation moves through different snapshots.
+* The dashboard supports **automatic snapshot playback**, allowing users to observe how the network changes over time.
+* Users can control playback using **Play/Pause, Previous/Next, Timeline, and Speed controls (0.5x, 1x, 2x, 5x)**.
+  
+---
 
 # Deployment Workflow
 
