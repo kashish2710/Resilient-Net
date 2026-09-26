@@ -1,4 +1,5 @@
-# ResiNet — Dynamic Wireless Network Intrusion Detection  | Live : https://resilient-net-2.onrender.com/
+# ResiNet — Dynamic Wireless Network Intrusion Detection 
+ Live : https://resilient-net-2.onrender.com/
 
 ResiNet is a web-based network intelligence and intrusion detection system for monitoring dynamic wireless/ad-hoc networks.
 
