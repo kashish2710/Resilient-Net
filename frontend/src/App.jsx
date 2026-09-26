@@ -18,7 +18,7 @@ function App() {
   // -----------------------------------------
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/snapshot/${snapshot}`)
+    fetch(`https://resilient-net-1.onrender.com/api/snapshot/${snapshot}`)
       .then(response => response.json())
       .then(result => {
         setData(result);
