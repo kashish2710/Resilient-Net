@@ -10,7 +10,7 @@ function App() {
   const [data, setData] = useState(null);
   const [selectedNode, setSelectedNode] = useState(null);
 
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
   const [speed, setSpeed] = useState(1);
 
   // -----------------------------------------
