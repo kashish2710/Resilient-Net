@@ -11,7 +11,7 @@ function App() {
   const [selectedNode, setSelectedNode] = useState(null);
 
   const [playing, setPlaying] = useState(true);
-const [speed, setSpeed] = useState(5);
+const [speed, setSpeed] = useState(1);
 
   // -----------------------------------------
   // LOAD SNAPSHOT
